@@ -1,0 +1,228 @@
+body{
+    background-image: url('/img/ffundo.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#botaou{
+    width: 150px;
+}
+
+.container-header {
+    background-color:#262626;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #fff;
+    position: relative; /* Ajuste para o menu dropdown */
+}
+
+.container-esquerda {
+    display: flex;
+}
+
+.container-direita {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-direita > ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.container-main {
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #fff;
+}
+
+#imagens-trocar img {
+    width: 500px; 
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.container-esquerda-main {
+    display: grid;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container-esquerda-main > img {
+    opacity: 1;
+}
+
+.container-final-img-direita > img {
+    opacity: 1 ;
+}
+
+.container-direita-main {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container-final {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.7);
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+}
+
+#container-main-esquerda-1 { 
+    background-color: rgba(0, 0, 0, 0.7);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#container-sobrenos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#container-sobrenos-texto {
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#container-sobrenos-texto > ul {
+    list-style-type: circle;
+}
+
+.container-footer-final2 > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Garante que a cor do texto seja herdada */
+    transition: background-color 0.3s, border-radius 0.3s; /* Adiciona uma transição suave */
+}
+
+a:hover{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-botoes {
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre os botões */
+    margin-top: 10px; /* Margem superior para separar dos parágrafos */
+}
+
+.container-botoes button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.container-botoes button:hover {
+    background-color: #0056b3;
+}
+
+/* -----------------MENU--------------------------- */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+    justify-content: flex-end;
+}
+
+.icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.icon::before,
+.icon::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.icon::before {
+    transform: translateY(-8px);
+}
+
+.icon::after {
+    transform: translateY(8px);
+}
+
+.menu-toggle.open .icon {
+    background-color: gray;
+}
+
+.menu-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #262626; /* Cor de fundo do menu */
+    z-index: 1000; /* Garante que o menu fique sobre o conteúdo */
+}
+
+.menu-nav.open {
+    display: block; /* Exibe o menu quando a classe 'open' é adicionada */
+}
+
+.menu-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-nav ul li {
+    padding: 20px 0;
+}
+
+.menu-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu-nav ul li a:hover {
+    color: #007bff;
+}
